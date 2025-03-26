@@ -1,0 +1,168 @@
+:root {
+  --background-color: #333;
+  --text-color: #fff;
+  --primary-color: #0a8754;
+  --secondary-color: rgb(219, 3, 3);
+  --tertiary-color: #dd5815;
+}
+/* #004f2d   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* 
+
+    HERO SECTION
+
+*/
+
+#hero-section {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hero-headline {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-headline,
+.hero-subheadline {
+  text-align: center;
+}
+
+.cta-btn {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 
+
+    FEATURE SECTION
+
+*/
+
+#features-section {
+  padding: 1rem 5rem;
+}
+
+@media all and (max-width: 500px) {
+  #features-section {
+    padding: 1rem;
+  }
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.features-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 5px 0px;
+}
+
+@media all and (max-width: 850px) {
+  .features-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 585px) {
+  .features-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-box {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.feature-description {
+  text-align: justify;
+}
+
+/* 
+
+    FOOTER
+
+*/
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: black;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media all and (max-width: 310px) {
+  .footer-links {
+    gap: 0.4rem;
+  }
+}
+
+.footer-links a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  font-size: 1.5rem;
+}
