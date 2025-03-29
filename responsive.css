@@ -1,0 +1,32 @@
+/*   
+
+    FEATURES SECTION
+
+ */
+@media all and (max-width: 655px) {
+  #features-section {
+    padding: 1rem;
+  }
+}
+@media all and (max-width: 800px) {
+  .feature-box {
+    flex-basis: 45%;
+  }
+}
+@media all and (max-width: 555px) {
+  .feature-box {
+    flex-basis: 90%;
+  }
+}
+
+/*   
+
+    FOOTER SECTION
+
+ */
+
+@media all and (max-width: 310px) {
+  .footer-links {
+    gap: 0.4rem;
+  }
+}

@@ -1,15 +1,24 @@
+/* 
+
+    GOOGLE FONT 
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
 :root {
   --background-color: #333;
   --text-color: #fff;
   --primary-color: #0a8754;
   --secondary-color: rgb(219, 3, 3);
   --tertiary-color: #dd5815;
+  --font-family: "Dosis", sans-serif;
 }
-/* #004f2d   */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 body {
@@ -26,21 +35,14 @@ body {
 */
 
 #hero-section {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 30px 0px;
   padding: 1rem;
+  text-align: center;
 }
 
 .hero-headline {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-}
-
-.hero-headline,
-.hero-subheadline {
-  text-align: center;
 }
 
 .cta-btn {
@@ -56,6 +58,11 @@ body {
   cursor: pointer;
 }
 
+.cta-btn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
 /* 
 
     FEATURE SECTION
@@ -66,36 +73,21 @@ body {
   padding: 1rem 5rem;
 }
 
-@media all and (max-width: 500px) {
-  #features-section {
-    padding: 1rem;
-  }
-}
-
 .features-header {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 .features-inner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 2rem;
   margin: 5px 0px;
 }
 
-@media all and (max-width: 850px) {
-  .features-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media all and (max-width: 585px) {
-  .features-inner {
-    grid-template-columns: 1fr;
-  }
-}
-
 .feature-box {
+  flex-basis: 30%;
   background-color: white;
   color: black;
   padding: 1rem;
@@ -137,12 +129,6 @@ footer {
   gap: 1rem;
 }
 
-@media all and (max-width: 310px) {
-  .footer-links {
-    gap: 0.4rem;
-  }
-}
-
 .footer-links a {
   color: var(--tertiary-color);
   text-decoration: none;
@@ -152,6 +138,21 @@ footer {
 }
 
 .footer-links a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.footer-contact {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-contact a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.footer-contact a:hover {
   text-decoration: underline;
   color: var(--secondary-color);
 }
